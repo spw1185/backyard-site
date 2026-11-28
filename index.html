@@ -9,28 +9,37 @@
 <link rel="apple-touch-icon" href="icon.png">
 <style>
   body{margin:0;font:18px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:#fff;background:#3f7f2a}
-  main{min-height:100vh;display:grid;place-items:center;text-align:center;padding:40px 20px;box-sizing:border-box;
+  main{min-height:100vh;display:grid;place-items:center;align-content:center;text-align:center;padding:40px 20px;box-sizing:border-box;
     background:radial-gradient(circle at 50% 40%,rgba(255,255,255,.12),rgba(0,0,0,.25))}
   img.icon{width:132px;height:132px;border-radius:30px;box-shadow:0 8px 24px rgba(0,0,0,.3)}
   h1{font-size:42px;line-height:1.05;margin:18px 0 8px;color:#ffe066;text-shadow:0 3px 0 #1d4a12}
   p{max-width:520px;margin:0 auto 14px}
   .btn{display:inline-block;margin:10px 6px;padding:12px 22px;border-radius:999px;background:#2fa6dd;color:#fff;font-weight:800;text-decoration:none;box-shadow:0 4px 0 #1b7aa8}
   .btn.alt{background:#fff;color:#2d3a1f;box-shadow:0 4px 0 #cfd6c4}
+  .wrap{display:flex;align-items:center;justify-content:center;gap:56px;max-width:980px;margin:0 auto}
+  .copy{max-width:520px}
+  .phone{flex:none;width:min(300px,72vw);aspect-ratio:9/16;border:11px solid #111;border-radius:46px;overflow:hidden;background:#111;
+    box-shadow:0 18px 40px rgba(0,0,0,.35),inset 0 0 0 2px #333;position:relative}
+  .phone video{width:100%;height:100%;object-fit:cover;display:block;border-radius:35px}
+  @media (max-width:760px){.wrap{flex-direction:column;gap:26px}.phone{order:2}}
   footer{margin-top:22px;font-size:14px;opacity:.85}
   footer a{color:#fff}
 </style>
 </head>
 <body>
 <main>
-  <div>
+  <div class="wrap">
+  <div class="phone"><video src="gameplay.mp4" poster="gameplay-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Backyard Defender gameplay"></video></div>
+  <div class="copy">
     <img class="icon" src="icon.png" alt="Backyard Defender app icon">
     <h1>Backyard Defender</h1>
     <p>Grab a water toy and defend the yard! Place Water Towers, protect the picnic, and survive wave after wave of bugs and silly bosses across five backyards.</p>
     <p>Five kids to unlock, ten water toys that evolve, and no account needed.</p>
     <a class="btn" href="#" aria-disabled="true">Coming soon to the App Store</a>
     <a class="btn alt" href="privacy.html">Privacy Policy</a>
-    <footer>© 2026 WilloGames · <a href="mailto:shawn@imakeugc.com">Contact</a></footer>
   </div>
+  </div>
+  <footer>© 2026 WilloGames · <a href="mailto:shawn@imakeugc.com">Contact</a></footer>
 </main>
 </body>
 </html>
